@@ -1,0 +1,9 @@
+c:\users\nisha\documents\visual studio 2010\Projects\CLUEIT2\CLUEIT2\bin\Debug\CLUEIT2.exe
+c:\users\nisha\documents\visual studio 2010\Projects\CLUEIT2\CLUEIT2\bin\Debug\CLUEIT2.pdb
+c:\users\nisha\documents\visual studio 2010\Projects\CLUEIT2\CLUEIT2\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\nisha\documents\visual studio 2010\Projects\CLUEIT2\CLUEIT2\obj\x86\Debug\CLUEIT2.mainWindow.resources
+c:\users\nisha\documents\visual studio 2010\Projects\CLUEIT2\CLUEIT2\obj\x86\Debug\CLUEIT2.Properties.Resources.resources
+c:\users\nisha\documents\visual studio 2010\Projects\CLUEIT2\CLUEIT2\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\nisha\documents\visual studio 2010\Projects\CLUEIT2\CLUEIT2\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\nisha\documents\visual studio 2010\Projects\CLUEIT2\CLUEIT2\obj\x86\Debug\CLUEIT2.exe
+c:\users\nisha\documents\visual studio 2010\Projects\CLUEIT2\CLUEIT2\obj\x86\Debug\CLUEIT2.pdb
