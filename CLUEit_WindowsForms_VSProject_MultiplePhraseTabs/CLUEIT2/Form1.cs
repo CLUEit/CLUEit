@@ -46,26 +46,18 @@ namespace CLUEIT2
             tabControlPhrases.TabPages.Add(searchPart);
             TabControl searches = new TabControl();
             searches.Parent = tabControlPhrases.TabPages[tabControlPhrases.TabCount - 1];
+            searches.Size = searches.Parent.Size;
             searches.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right
                 | AnchorStyles.Top | AnchorStyles.Left);
-            searches.Size = searches.Parent.Size;
+
 
             searches.TabPages.Add("Wikipedia");
             WebBrowser wikipediaBrowser = new WebBrowser();
             wikipediaBrowser.Parent = searches.TabPages[searches.TabCount-1];
             wikipediaBrowser.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right
                 | AnchorStyles.Top | AnchorStyles.Left);
-            //searches.Show();
-
-           // Form form = new Form();
-            //searches.Parent = form;
-            //form.Show();
-         //   searches.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right
-           //         | AnchorStyles.Top | AnchorStyles.Left);
-
-           // form.Show();
-
             loadWikipediaTab(args, wikipediaBrowser);
+            wikipediaBrowser.Size = wikipediaBrowser.Parent.Size;
 
             searches.TabPages.Add("Google");
             WebBrowser googleBrowser = new WebBrowser();
@@ -73,6 +65,7 @@ namespace CLUEIT2
             googleBrowser.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right
                 | AnchorStyles.Top | AnchorStyles.Left);
             loadGoogleTab(args, googleBrowser);
+            googleBrowser.Size = googleBrowser.Parent.Size;
 
             searches.TabPages.Add("Images");
             WebBrowser imagesBrowser = new WebBrowser();
@@ -80,14 +73,17 @@ namespace CLUEIT2
             imagesBrowser.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right
                 | AnchorStyles.Top | AnchorStyles.Left);
             loadImagesTab(args, imagesBrowser);
+            imagesBrowser.Size = imagesBrowser.Parent.Size;
 
             searches.TabPages.Add("YouTube");
             WebBrowser youTubeBrowser = new WebBrowser();
             youTubeBrowser.Parent = searches.TabPages[searches.TabCount - 1];
-            //youTubeBrowser.Size = (10,10);
             youTubeBrowser.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right
                 | AnchorStyles.Top | AnchorStyles.Left);
             loadYouTubeTab(args, youTubeBrowser);
+            youTubeBrowser.Size = youTubeBrowser.Parent.Size;
+
+            tabControlPhrases.SelectedIndex = tabControlPhrases.TabCount - 1;
 
         }
 

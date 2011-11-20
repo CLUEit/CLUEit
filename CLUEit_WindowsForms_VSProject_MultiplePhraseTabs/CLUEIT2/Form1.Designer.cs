@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
-            this.labelCLUEit = new System.Windows.Forms.Label();
-            this.tBoxSearchTerms = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.tBoxSearchTerms = new System.Windows.Forms.TextBox();
+            this.labelCLUEit = new System.Windows.Forms.Label();
             this.tabControlPhrases = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -60,29 +60,6 @@
             this.tlpMain.Size = new System.Drawing.Size(497, 305);
             this.tlpMain.TabIndex = 0;
             // 
-            // labelCLUEit
-            // 
-            this.labelCLUEit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelCLUEit.AutoSize = true;
-            this.labelCLUEit.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCLUEit.Location = new System.Drawing.Point(3, 0);
-            this.labelCLUEit.Name = "labelCLUEit";
-            this.labelCLUEit.Size = new System.Drawing.Size(89, 27);
-            this.labelCLUEit.TabIndex = 1;
-            this.labelCLUEit.Text = "CLUEit";
-            // 
-            // tBoxSearchTerms
-            // 
-            this.tBoxSearchTerms.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.tBoxSearchTerms.Location = new System.Drawing.Point(98, 3);
-            this.tBoxSearchTerms.Name = "tBoxSearchTerms";
-            this.tBoxSearchTerms.Size = new System.Drawing.Size(327, 20);
-            this.tBoxSearchTerms.TabIndex = 2;
-            // 
             // btnUpdate
             // 
             this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
@@ -95,6 +72,29 @@
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // tBoxSearchTerms
+            // 
+            this.tBoxSearchTerms.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tBoxSearchTerms.Location = new System.Drawing.Point(98, 3);
+            this.tBoxSearchTerms.Name = "tBoxSearchTerms";
+            this.tBoxSearchTerms.Size = new System.Drawing.Size(327, 20);
+            this.tBoxSearchTerms.TabIndex = 2;
+            // 
+            // labelCLUEit
+            // 
+            this.labelCLUEit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelCLUEit.AutoSize = true;
+            this.labelCLUEit.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCLUEit.Location = new System.Drawing.Point(3, 0);
+            this.labelCLUEit.Name = "labelCLUEit";
+            this.labelCLUEit.Size = new System.Drawing.Size(89, 27);
+            this.labelCLUEit.TabIndex = 1;
+            this.labelCLUEit.Text = "CLUEit";
             // 
             // tabControlPhrases
             // 
@@ -125,7 +125,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(105, 74);
+            this.tabPage2.Size = new System.Drawing.Size(483, 246);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
