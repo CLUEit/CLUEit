@@ -7,3 +7,12 @@ c:\users\nisha\documents\visual studio 2010\Projects\CLUEIT2\CLUEIT2\obj\x86\Deb
 c:\users\nisha\documents\visual studio 2010\Projects\CLUEIT2\CLUEIT2\obj\x86\Debug\GenerateResource.write.1.tlog
 c:\users\nisha\documents\visual studio 2010\Projects\CLUEIT2\CLUEIT2\obj\x86\Debug\CLUEIT2.exe
 c:\users\nisha\documents\visual studio 2010\Projects\CLUEIT2\CLUEIT2\obj\x86\Debug\CLUEIT2.pdb
+C:\Users\Nisha\Desktop\CLUEit_repo\CLUEit\CLUEit_WindowsForms_VSProject_MultiplePhraseTabs\CLUEIT2\obj\x86\Debug\CLUEIT2.exe
+C:\Users\Nisha\Desktop\CLUEit_repo\CLUEit\CLUEit_WindowsForms_VSProject_MultiplePhraseTabs\CLUEIT2\obj\x86\Debug\CLUEIT2.pdb
+C:\Users\Nisha\Desktop\CLUEit_repo\CLUEit\CLUEit_WindowsForms_VSProject_MultiplePhraseTabs\CLUEIT2\bin\Debug\CLUEIT2.exe
+C:\Users\Nisha\Desktop\CLUEit_repo\CLUEit\CLUEit_WindowsForms_VSProject_MultiplePhraseTabs\CLUEIT2\bin\Debug\CLUEIT2.pdb
+C:\Users\Nisha\Desktop\CLUEit_repo\CLUEit\CLUEit_WindowsForms_VSProject_MultiplePhraseTabs\CLUEIT2\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Nisha\Desktop\CLUEit_repo\CLUEit\CLUEit_WindowsForms_VSProject_MultiplePhraseTabs\CLUEIT2\obj\x86\Debug\CLUEIT2.mainWindow.resources
+C:\Users\Nisha\Desktop\CLUEit_repo\CLUEit\CLUEit_WindowsForms_VSProject_MultiplePhraseTabs\CLUEIT2\obj\x86\Debug\CLUEIT2.Properties.Resources.resources
+C:\Users\Nisha\Desktop\CLUEit_repo\CLUEit\CLUEit_WindowsForms_VSProject_MultiplePhraseTabs\CLUEIT2\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Nisha\Desktop\CLUEit_repo\CLUEit\CLUEit_WindowsForms_VSProject_MultiplePhraseTabs\CLUEIT2\obj\x86\Debug\GenerateResource.write.1.tlog

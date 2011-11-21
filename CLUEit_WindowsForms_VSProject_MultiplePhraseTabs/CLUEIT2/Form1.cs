@@ -15,8 +15,8 @@ namespace CLUEIT2
         {
             InitializeComponent();
            // tabControlPhrases.SelectedTab = tabControlPhrases.TabPages[1];
-            tabControlPhrases.TabPages.Remove(tabControlPhrases.TabPages[1]);
-            tabControlPhrases.TabPages.Remove(tabControlPhrases.TabPages[0]);
+           // tabControlPhrases.TabPages.Remove(tabControlPhrases.TabPages[1]);
+          //  tabControlPhrases.TabPages.Remove(tabControlPhrases.TabPages[0]);
 
            /* string[] words = parseInitialInput(args);
             tBoxSearchTerms.Text = string.Join<string>(" ", words);

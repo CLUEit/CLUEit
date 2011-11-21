@@ -33,10 +33,7 @@
             this.tBoxSearchTerms = new System.Windows.Forms.TextBox();
             this.labelCLUEit = new System.Windows.Forms.Label();
             this.tabControlPhrases = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tlpMain.SuspendLayout();
-            this.tabControlPhrases.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpMain
@@ -102,33 +99,11 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpMain.SetColumnSpan(this.tabControlPhrases, 3);
-            this.tabControlPhrases.Controls.Add(this.tabPage1);
-            this.tabControlPhrases.Controls.Add(this.tabPage2);
             this.tabControlPhrases.Location = new System.Drawing.Point(3, 30);
             this.tabControlPhrases.Name = "tabControlPhrases";
             this.tabControlPhrases.SelectedIndex = 0;
             this.tabControlPhrases.Size = new System.Drawing.Size(491, 272);
             this.tabControlPhrases.TabIndex = 5;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(483, 246);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(483, 246);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // mainWindow
             // 
@@ -141,7 +116,6 @@
             this.Text = "CLUEit";
             this.tlpMain.ResumeLayout(false);
             this.tlpMain.PerformLayout();
-            this.tabControlPhrases.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -153,8 +127,6 @@
         private System.Windows.Forms.TextBox tBoxSearchTerms;
         private System.Windows.Forms.Label labelCLUEit;
         private System.Windows.Forms.TabControl tabControlPhrases;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
     }
 }
 
