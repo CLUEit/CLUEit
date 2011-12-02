@@ -1,0 +1,8 @@
+c:\users\lou\documents\visual studio 2010\Projects\UserPreferences\UserPreferences\bin\Debug\UserPreferences.exe
+c:\users\lou\documents\visual studio 2010\Projects\UserPreferences\UserPreferences\bin\Debug\UserPreferences.pdb
+c:\users\lou\documents\visual studio 2010\Projects\UserPreferences\UserPreferences\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\lou\documents\visual studio 2010\Projects\UserPreferences\UserPreferences\obj\x86\Debug\UserPreferences.Properties.Resources.resources
+c:\users\lou\documents\visual studio 2010\Projects\UserPreferences\UserPreferences\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\lou\documents\visual studio 2010\Projects\UserPreferences\UserPreferences\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\lou\documents\visual studio 2010\Projects\UserPreferences\UserPreferences\obj\x86\Debug\UserPreferences.exe
+c:\users\lou\documents\visual studio 2010\Projects\UserPreferences\UserPreferences\obj\x86\Debug\UserPreferences.pdb

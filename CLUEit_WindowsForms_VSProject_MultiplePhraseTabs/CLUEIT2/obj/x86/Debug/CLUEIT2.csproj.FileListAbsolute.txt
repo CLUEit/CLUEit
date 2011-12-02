@@ -16,3 +16,5 @@ C:\Users\Nisha\Desktop\CLUEit_repo\CLUEit\CLUEit_WindowsForms_VSProject_Multiple
 C:\Users\Nisha\Desktop\CLUEit_repo\CLUEit\CLUEit_WindowsForms_VSProject_MultiplePhraseTabs\CLUEIT2\obj\x86\Debug\CLUEIT2.Properties.Resources.resources
 C:\Users\Nisha\Desktop\CLUEit_repo\CLUEit\CLUEit_WindowsForms_VSProject_MultiplePhraseTabs\CLUEIT2\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\Nisha\Desktop\CLUEit_repo\CLUEit\CLUEit_WindowsForms_VSProject_MultiplePhraseTabs\CLUEIT2\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Lou\CLUEit\CLUEit_WindowsForms_VSProject_MultiplePhraseTabs\CLUEIT2\obj\x86\Debug\CLUEIT2.exe
+C:\Users\Lou\CLUEit\CLUEit_WindowsForms_VSProject_MultiplePhraseTabs\CLUEIT2\obj\x86\Debug\CLUEIT2.pdb
