@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserPreferences>
+  <webservice name="wikipedia">
+    <preference setting="default" />
+  </webservice>
+  <webservice name="bing">
+    <preference setting="default" />
+  </webservice>
+  <webservice name="yahoo">
+    <preference setting="default" />
+  </webservice>
+  <webservice name="google">
+    <preference setting="default" />
+  </webservice>
+  <webservice name="google_images">
+    <preference setting="default" />
+  </webservice>
+  <webservice name="google_maps">
+    <preference setting="default" />
+  </webservice>
+  <webservice name="youtube">
+    <preference setting="default" />
+  </webservice>
+  <webservice name="imbd">
+    <preference setting="default" />
+  </webservice>
+  <webservice name="ebay">
+    <preference setting="default" />
+  </webservice>
+  <webservice name="amazon">
+    <preference setting="default" />
+  </webservice>
+  <webservice name="dictionary.com">
+    <preference setting="default" />
+  </webservice>
+</UserPreferences>
