@@ -16,28 +16,7 @@ namespace CLUEIT2
         [STAThread]
         static void Main()
         {
-            //KeyHook hook = new KeyHook();
-
-            //create another thread that loops and calls RegisterHook, and when it returns true, we can do something??????
-
-            //Thread thread = new Thread(new ThreadStart(waitForShortcut));
-            //thread.Start();
-           // while (!KeyHook.RegisterHook()) { };
-
-            //if (!KeyHook.RegisterHook())
-          //  {
-           //     MessageBox.Show("It didn't work.");
-           // }
-
-           // if (InterceptKeys.SetHook(InterceptKeys.HookCallback).ToInt32() != 0)
-           // {
-             //   MessageBox.Show("It didn't work.");
-         //   }
-
-           // InterceptKeys hook = new InterceptKeys();
             
-
-            //Here to.....
             System.Diagnostics.Process hotkey = new System.Diagnostics.Process();
             hotkey.StartInfo.FileName = @"C:\Program Files\CLUEit\selected_text.exe";
             hotkey.Start();

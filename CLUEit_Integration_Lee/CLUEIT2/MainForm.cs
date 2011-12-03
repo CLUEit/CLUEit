@@ -16,7 +16,7 @@ namespace CLUEIT2
         public mainWindow(string[] args)
         {
             InitializeComponent();
-            string[] words = parseInitialInput(args);
+            makeNewPhraseTab(args);
             tBoxSearchTerms.Text = string.Join<string>(" ", words);
            // tabControlPhrases.Appearance = TabAppearance.FlatButtons;
         }

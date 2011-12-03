@@ -17,3 +17,5 @@ C:\Users\Nisha\Documents\Visual Studio 2010\Projects\CLUEit3\CLUEIT2\obj\x86\Deb
 C:\Users\Nisha\Documents\Visual Studio 2010\Projects\CLUEit3\CLUEIT2\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\Nisha\Documents\Visual Studio 2010\Projects\CLUEit3\CLUEIT2\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\Nisha\Documents\Visual Studio 2010\Projects\CLUEit3\CLUEIT2\obj\x86\Debug\CLUEIT2.SettingsForm.resources
+C:\Users\Lou\CLUEit_Repo_New\CLUEit\CLUEit_Dec3_5pm\CLUEIT2\obj\x86\Debug\CLUEIT2.exe
+C:\Users\Lou\CLUEit_Repo_New\CLUEit\CLUEit_Dec3_5pm\CLUEIT2\obj\x86\Debug\CLUEIT2.pdb
