@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <UserPreferences>
+  <webservice name="dictionary.com">
+    <preference setting="default" />
+  </webservice>
   <webservice name="wikipedia">
     <preference setting="default" />
   </webservice>
@@ -21,16 +24,13 @@
   <webservice name="youtube">
     <preference setting="default" />
   </webservice>
-  <webservice name="imbd">
-    <preference setting="default" />
-  </webservice>
-  <webservice name="ebay">
+  <webservice name="imdb">
     <preference setting="default" />
   </webservice>
   <webservice name="amazon">
     <preference setting="default" />
   </webservice>
-  <webservice name="dictionary.com">
+  <webservice name="ebay">
     <preference setting="default" />
   </webservice>
 </UserPreferences>

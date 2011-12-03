@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLUEIT2", "CLUEIT2\CLUEIT2.csproj", "{D671DFA1-6B46-44CC-8D8D-4E474795CD7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D671DFA1-6B46-44CC-8D8D-4E474795CD7C}.Debug|x86.ActiveCfg = Debug|x86
+		{D671DFA1-6B46-44CC-8D8D-4E474795CD7C}.Debug|x86.Build.0 = Debug|x86
+		{D671DFA1-6B46-44CC-8D8D-4E474795CD7C}.Release|x86.ActiveCfg = Release|x86
+		{D671DFA1-6B46-44CC-8D8D-4E474795CD7C}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

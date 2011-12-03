@@ -1,0 +1,10 @@
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\obj\x86\Release\CLUEIT2.mainWindow.resources
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\obj\x86\Release\CLUEIT2.Properties.Resources.resources
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\obj\x86\Release\CLUEIT2.SettingsForm.resources
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\bin\Release\CLUEIT2.exe
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\bin\Release\CLUEIT2.pdb
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\obj\x86\Release\CLUEIT2.exe
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\obj\x86\Release\CLUEIT2.pdb

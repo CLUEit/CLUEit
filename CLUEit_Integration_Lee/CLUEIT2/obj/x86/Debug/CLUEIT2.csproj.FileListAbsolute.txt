@@ -1,0 +1,30 @@
+c:\users\nisha\documents\visual studio 2010\Projects\CLUEIT2\CLUEIT2\bin\Debug\CLUEIT2.exe
+c:\users\nisha\documents\visual studio 2010\Projects\CLUEIT2\CLUEIT2\bin\Debug\CLUEIT2.pdb
+c:\users\nisha\documents\visual studio 2010\Projects\CLUEIT2\CLUEIT2\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\nisha\documents\visual studio 2010\Projects\CLUEIT2\CLUEIT2\obj\x86\Debug\CLUEIT2.mainWindow.resources
+c:\users\nisha\documents\visual studio 2010\Projects\CLUEIT2\CLUEIT2\obj\x86\Debug\CLUEIT2.Properties.Resources.resources
+c:\users\nisha\documents\visual studio 2010\Projects\CLUEIT2\CLUEIT2\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\nisha\documents\visual studio 2010\Projects\CLUEIT2\CLUEIT2\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\nisha\documents\visual studio 2010\Projects\CLUEIT2\CLUEIT2\obj\x86\Debug\CLUEIT2.exe
+c:\users\nisha\documents\visual studio 2010\Projects\CLUEIT2\CLUEIT2\obj\x86\Debug\CLUEIT2.pdb
+C:\Users\Nisha\Documents\Visual Studio 2010\Projects\CLUEit3\CLUEIT2\obj\x86\Debug\CLUEIT2.exe
+C:\Users\Nisha\Documents\Visual Studio 2010\Projects\CLUEit3\CLUEIT2\obj\x86\Debug\CLUEIT2.pdb
+C:\Users\Nisha\Documents\Visual Studio 2010\Projects\CLUEit3\CLUEIT2\bin\Debug\CLUEIT2.exe
+C:\Users\Nisha\Documents\Visual Studio 2010\Projects\CLUEit3\CLUEIT2\bin\Debug\CLUEIT2.pdb
+C:\Users\Nisha\Documents\Visual Studio 2010\Projects\CLUEit3\CLUEIT2\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Nisha\Documents\Visual Studio 2010\Projects\CLUEit3\CLUEIT2\obj\x86\Debug\CLUEIT2.mainWindow.resources
+C:\Users\Nisha\Documents\Visual Studio 2010\Projects\CLUEit3\CLUEIT2\obj\x86\Debug\CLUEIT2.Properties.Resources.resources
+C:\Users\Nisha\Documents\Visual Studio 2010\Projects\CLUEit3\CLUEIT2\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Nisha\Documents\Visual Studio 2010\Projects\CLUEit3\CLUEIT2\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Nisha\Documents\Visual Studio 2010\Projects\CLUEit3\CLUEIT2\obj\x86\Debug\CLUEIT2.SettingsForm.resources
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\obj\x86\Debug\CLUEIT2.exe
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\obj\x86\Debug\CLUEIT2.pdb
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\obj\x86\Debug\CLUEIT2.mainWindow.resources
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\obj\x86\Debug\CLUEIT2.Properties.Resources.resources
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\obj\x86\Debug\CLUEIT2.SettingsForm.resources
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\bin\Debug\CLUEIT2.exe
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\bin\Debug\CLUEIT2.pdb
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\bin\Debug\IMDb.dll
