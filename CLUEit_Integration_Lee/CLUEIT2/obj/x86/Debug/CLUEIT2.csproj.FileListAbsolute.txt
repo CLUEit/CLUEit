@@ -28,3 +28,13 @@ C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\obj\x86\Debug
 C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\bin\Debug\CLUEIT2.exe
 C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\bin\Debug\CLUEIT2.pdb
 C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_toIntegrateWithLou\CLUEIT2\bin\Debug\IMDb.dll
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_Integration_Lee\CLUEIT2\obj\x86\Debug\CLUEIT2.exe
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_Integration_Lee\CLUEIT2\obj\x86\Debug\CLUEIT2.pdb
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_Integration_Lee\CLUEIT2\bin\Debug\CLUEIT2.exe
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_Integration_Lee\CLUEIT2\bin\Debug\CLUEIT2.pdb
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_Integration_Lee\CLUEIT2\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_Integration_Lee\CLUEIT2\obj\x86\Debug\CLUEIT2.mainWindow.resources
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_Integration_Lee\CLUEIT2\obj\x86\Debug\CLUEIT2.Properties.Resources.resources
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_Integration_Lee\CLUEIT2\obj\x86\Debug\CLUEIT2.SettingsForm.resources
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_Integration_Lee\CLUEIT2\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Lee\Desktop\CLUE\CLUEit\CLUEit_Integration_Lee\CLUEIT2\obj\x86\Debug\GenerateResource.write.1.tlog
