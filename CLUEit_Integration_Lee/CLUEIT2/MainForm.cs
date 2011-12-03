@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Web;
 using System.Windows.Forms;
 
 namespace CLUEIT2
@@ -83,10 +84,24 @@ namespace CLUEIT2
                             dictionary.Add(preference_.ServiceName, false);
                         }
                     }
-
                     else if (preference_.ServiceName == "youtube")
                     {
-                        dictionary.Add(preference_.ServiceName, true);
+                        string youtubeSearch = "";
+                        foreach (string arg in args)
+                        {
+                            youtubeSearch += arg + "+";
+                        }
+                        string youtubePage = ScreenScrape("http://www.youtube.com/results?search_query=" + youtubeSearch);
+                        string youtubePattern = @"(No\ video\ results\ for)";
+
+                        if (System.Text.RegularExpressions.Regex.IsMatch(youtubePage, youtubePattern, System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace | System.Text.RegularExpressions.RegexOptions.IgnoreCase))
+                        {
+                            dictionary.Add(preference_.ServiceName, false);
+                        }
+                        else
+                        {
+                            dictionary.Add(preference_.ServiceName, true);
+                        }
                     }
                     else if (preference_.ServiceName == "bing")
                     {
@@ -99,29 +114,84 @@ namespace CLUEIT2
                     else if (preference_.ServiceName == "dictionary.com")
                     {
                         dictionary.Add(preference_.ServiceName, true);
+
                         for (int i = 0; i < searchPart.Length; i++)
                         {
                             if(!Char.IsLetter(searchPart[i]))
                             {
                                 dictionary[preference_.ServiceName] = false;
                             }
-                        } 
+                        }
+
+                        if (dictionary[preference_.ServiceName])
+                        {
+                            string dictPage = ScreenScrape("http://dictionary.reference.com/browse/" + searchPart);
+                            string dictPattern = @"(no\ dictionary\ results)";
+
+                            if (System.Text.RegularExpressions.Regex.IsMatch(dictPage, dictPattern, System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace | System.Text.RegularExpressions.RegexOptions.IgnoreCase))
+                            {
+                                dictionary[preference_.ServiceName] = false;
+                            }
+                        }
                     }
                     else if (preference_.ServiceName == "imdb")
                     {
-                        dictionary.Add(preference_.ServiceName, true);
+                        string movieSearch = "";
+                        foreach (string arg in args)
+                        {
+                            movieSearch += arg + "+";
+                        }
+
+                        string imdbPage = ScreenScrape("http://www.imdb.com/find?s=all&q=" + movieSearch);
+                        string imdbPattern = @"(No\ Matches.)";
+
+                        if (System.Text.RegularExpressions.Regex.IsMatch(imdbPage, imdbPattern, System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace | System.Text.RegularExpressions.RegexOptions.IgnoreCase))
+                        {
+                            dictionary.Add(preference_.ServiceName, false);
+                        }
+                        else
+                        {
+                            dictionary.Add(preference_.ServiceName, true);
+                        }
                     }
                     else if (preference_.ServiceName == "amazon")
                     {
-                        dictionary.Add(preference_.ServiceName, true);
+                        string amazonSearch = "";
+                        foreach (string arg in args)
+                        {
+                            amazonSearch += arg + "+";
+                        }
+                        string amazonPage = ScreenScrape("http://www.amazon.com/s/ref=nb_sb_ss_i_7_5?url=search-alias%3Daps&field-keywords=" + amazonSearch);
+                        string amazonPattern = @"(No\ Results\ Match\ Your\ Search)";
+
+                        if (System.Text.RegularExpressions.Regex.IsMatch(amazonPage, amazonPattern, System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace | System.Text.RegularExpressions.RegexOptions.IgnoreCase))
+                        {
+                            dictionary.Add(preference_.ServiceName, false);
+                        }
+                        else
+                        {
+                            dictionary.Add(preference_.ServiceName, true);
+                        }
                     }
                     else if (preference_.ServiceName == "ebay")
                     {
                         dictionary.Add(preference_.ServiceName, true);
+
+                        try
+                        {
+                            if (dictionary["amazon"] == false)
+                            {
+                                dictionary[preference_.ServiceName] = false;
+                            }
+                        }
+                        catch(Exception e)
+                        {
+                            Console.WriteLine("{0}: Amazon must come before ebay in preference xml", e);
+                        }
                     }
                     else
                     {
-                        System.Console.WriteLine("Error Service Names");
+                        System.Console.WriteLine("Error: Service Names incorrect");
                     }
                 }
             }
