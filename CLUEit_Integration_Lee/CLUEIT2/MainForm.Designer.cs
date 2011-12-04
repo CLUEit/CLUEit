@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainWindow));
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.tBoxSearchTerms = new System.Windows.Forms.TextBox();
             this.labelCLUEit = new System.Windows.Forms.Label();
-            this.tabControlPhrases = new System.Windows.Forms.TabControl();
             this.btnSettings = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.tabControlPhrases = new System.Windows.Forms.TabControl();
             this.toolTipSettings = new System.Windows.Forms.ToolTip(this.components);
             this.tlpMain.SuspendLayout();
             this.SuspendLayout();
@@ -64,18 +64,6 @@
             this.tlpMain.Size = new System.Drawing.Size(497, 305);
             this.tlpMain.TabIndex = 0;
             // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdate.Location = new System.Drawing.Point(395, 10);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(63, 22);
-            this.btnUpdate.TabIndex = 4;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
             // tBoxSearchTerms
             // 
             this.tBoxSearchTerms.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
@@ -97,23 +85,6 @@
             this.labelCLUEit.TabIndex = 1;
             this.labelCLUEit.Text = "CLUEit";
             // 
-            // tabControlPhrases
-            // 
-            this.tabControlPhrases.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tabControlPhrases.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.tlpMain.SetColumnSpan(this.tabControlPhrases, 4);
-            this.tabControlPhrases.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControlPhrases.Location = new System.Drawing.Point(3, 38);
-            this.tabControlPhrases.Multiline = true;
-            this.tabControlPhrases.Name = "tabControlPhrases";
-            this.tabControlPhrases.SelectedIndex = 0;
-            this.tabControlPhrases.Size = new System.Drawing.Size(491, 264);
-            this.tabControlPhrases.TabIndex = 5;
-            this.tabControlPhrases.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControlPhrases_Selecting);
-            this.tabControlPhrases.Deselecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControlPhrases_Deselecting);
-            // 
             // btnSettings
             // 
             this.btnSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
@@ -129,6 +100,32 @@
             this.btnSettings.UseVisualStyleBackColor = true;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdate.Location = new System.Drawing.Point(395, 10);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(63, 22);
+            this.btnUpdate.TabIndex = 4;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // tabControlPhrases
+            // 
+            this.tabControlPhrases.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tlpMain.SetColumnSpan(this.tabControlPhrases, 4);
+            this.tabControlPhrases.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlPhrases.Location = new System.Drawing.Point(3, 38);
+            this.tabControlPhrases.Multiline = true;
+            this.tabControlPhrases.Name = "tabControlPhrases";
+            this.tabControlPhrases.SelectedIndex = 0;
+            this.tabControlPhrases.Size = new System.Drawing.Size(491, 264);
+            this.tabControlPhrases.TabIndex = 5;
+            // 
             // mainWindow
             // 
             this.AcceptButton = this.btnUpdate;
@@ -140,6 +137,7 @@
             this.MinimumSize = new System.Drawing.Size(516, 349);
             this.Name = "mainWindow";
             this.Text = "CLUEit";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mainWindow_FormClosing);
             this.tlpMain.ResumeLayout(false);
             this.tlpMain.PerformLayout();
             this.ResumeLayout(false);

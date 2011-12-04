@@ -58,3 +58,13 @@ C:\Users\Lou\CLUEit_Repo_New\CLUEit\CLUEit_Integration_Lee\CLUEIT2\obj\x86\Debug
 C:\Users\Lou\CLUEit_Repo_New\CLUEit\CLUEit_Integration_Lee\CLUEIT2\obj\x86\Debug\CLUEIT2.SettingsForm.resources
 C:\Users\Lou\CLUEit_Repo_New\CLUEit\CLUEit_Integration_Lee\CLUEIT2\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\Lou\CLUEit_Repo_New\CLUEit\CLUEit_Integration_Lee\CLUEIT2\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Nisha\Desktop\CLUEit_repo\CLUEit\CLUEit_Integration_Lee\CLUEIT2\obj\x86\Debug\CLUEIT2.exe
+C:\Users\Nisha\Desktop\CLUEit_repo\CLUEit\CLUEit_Integration_Lee\CLUEIT2\obj\x86\Debug\CLUEIT2.pdb
+C:\Users\Nisha\Desktop\CLUEit_repo\CLUEit\CLUEit_Integration_Lee\CLUEIT2\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Nisha\Desktop\CLUEit_repo\CLUEit\CLUEit_Integration_Lee\CLUEIT2\obj\x86\Debug\CLUEIT2.mainWindow.resources
+C:\Users\Nisha\Desktop\CLUEit_repo\CLUEit\CLUEit_Integration_Lee\CLUEIT2\obj\x86\Debug\CLUEIT2.Properties.Resources.resources
+C:\Users\Nisha\Desktop\CLUEit_repo\CLUEit\CLUEit_Integration_Lee\CLUEIT2\obj\x86\Debug\CLUEIT2.SettingsForm.resources
+C:\Users\Nisha\Desktop\CLUEit_repo\CLUEit\CLUEit_Integration_Lee\CLUEIT2\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Nisha\Desktop\CLUEit_repo\CLUEit\CLUEit_Integration_Lee\CLUEIT2\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Nisha\Desktop\CLUEit_repo\CLUEit\CLUEit_Integration_Lee\CLUEIT2\bin\Debug\CLUEIT2.exe
+C:\Users\Nisha\Desktop\CLUEit_repo\CLUEit\CLUEit_Integration_Lee\CLUEIT2\bin\Debug\CLUEIT2.pdb

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Web;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace CLUEIT2
 {
@@ -16,8 +17,11 @@ namespace CLUEIT2
         public mainWindow(string[] args)
         {
             InitializeComponent();
+          //  closing = false;
             makeNewPhraseTab(args);
-            tBoxSearchTerms.Text = string.Join<string>(" ", words);
+            tBoxSearchTerms.Text = string.Join<string>(" ", args);
+
+            timer = new System.Threading.Timer(checkForNewPhrase, null, 20000, 20000);
            // tabControlPhrases.Appearance = TabAppearance.FlatButtons;
         }
         public static string ScreenScrape(string url)
@@ -26,6 +30,36 @@ namespace CLUEIT2
             {
                 // set properties of the client 
                 return client.DownloadString(url);
+            }
+        }
+
+     //   static public void waitForNewPhrase()
+      //  {
+          //  int phraseNum = 0;
+
+          //  while (!closing)
+           // {
+          //  }
+
+               // string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Public\TestFolder\WriteLines2.txt");
+      //  }
+
+        private void checkForNewPhrase(object i)
+        {
+            lock (checkLock)
+            {
+                //this code assuming that you write the phrase on a line followed by the counter on a separate line
+                string[] lines = System.IO.File.ReadAllLines(@"C:\Program Files\CLUEit\phrases.txt");
+                {
+                }
+
+                if (Convert.ToInt32(lines[lines.Length - 1]) == numPhrases)
+                {
+                    string[] phrase = { lines[lines.Length - 2] };
+                    makeNewPhraseTab(parseInitialInput(phrase));
+                    numPhrases++;
+
+                }
             }
         }
 
@@ -483,16 +517,34 @@ namespace CLUEIT2
             loadSettingsForm();
         }
 
-        private void tabControlPhrases_Selecting(object sender, TabControlCancelEventArgs e)
-        {
+      //  private void tabControlPhrases_Selecting(object sender, TabControlCancelEventArgs e)
+        //{
             //tabControlPhrases.SelectedTab.BackColor = Color.BlanchedAlmond;
            // I think setting the ForeColor of the selected tab to SystemColors.ControlLightLight will
           //  tabControlPhrases.SelectedTab.ForeColor = SystemColors.Highlight;
+       // }
+
+       // private void tabControlPhrases_Deselecting(object sender, TabControlCancelEventArgs e)
+      //  {
+           // tabControlPhrases.SelectedTab.ForeColor = SystemColors.Control
+      //  }
+
+
+      //  private static bool closing;
+
+       // private void mainWindow_FormClosing(object sender, FormClosingEventArgs e)
+       // {
+           // closing = true;
+       // }
+
+        static int numPhrases = 1;
+        System.Threading.Timer timer;
+        private Object checkLock = new Object();
+
+        private void mainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            timer.Dispose();
         }
 
-        private void tabControlPhrases_Deselecting(object sender, TabControlCancelEventArgs e)
-        {
-           // tabControlPhrases.SelectedTab.ForeColor = SystemColors.Control
-        }
     }
 }
