@@ -239,24 +239,31 @@ namespace CLUEIT2
                 //dgv doesn't need anymore headings, right?
                 //make sure if a cell was in it's dirty state it's value has actually changed when OK is pressed
                 //(might have to call commit everytime the dirty state is changed)
-                if (row.Cells[1].Value.ToString() == "Default")
+
+
+                if (row.Cells[0].Value != null)
                 {
-                    preferences.UpdatePreference(row.Cells[0].Value.ToString(), settings.defaultDisplay);
+                    if (row.Cells[1].Value.ToString() == "Default")
+                    {
+                        preferences.UpdatePreference(row.Cells[0].Value.ToString(), settings.defaultDisplay);
+                    }
+
+                    else if (row.Cells[1].Value.ToString() == "Always Display")
+                    {
+                        preferences.UpdatePreference(row.Cells[0].Value.ToString(), settings.alwaysDisplay);
+                    }
+
+                    else if (row.Cells[1].Value.ToString() == "Never Display")
+                    {
+                        preferences.UpdatePreference(row.Cells[0].Value.ToString(), settings.neverDisplay);
+                    }
                 }
 
-                else if (row.Cells[1].Value.ToString() == "Always Display")
-                {
-                    preferences.UpdatePreference(row.Cells[0].Value.ToString(), settings.alwaysDisplay);
-                }
-
-                else if (row.Cells[1].Value.ToString() == "Never Display")
-                {
-                    preferences.UpdatePreference(row.Cells[0].Value.ToString(), settings.neverDisplay);
-                }
-
-                this.Close();
+            //    this.Close();
 
             }
+
+            this.Close();
         }
 
         Preferences preferences;

@@ -72,7 +72,7 @@ namespace CLUEIT2
         public void restoreActiveWindowSize()
         {
             System.Diagnostics.Process resize = new System.Diagnostics.Process();
-            resize.StartInfo.FileName = @"C:\Users\Lee\Desktop\CLUE\CLUEit_final\CLUEit\resize.exe";
+            resize.StartInfo.FileName = @"C:\Program Files\CLUEit\resize.exe";
             resize.StartInfo.Arguments = activeHandle.ToString() + " 0 0 " + screensize.Width + " " + screensize.Height;
             resize.Start();
             resize.WaitForExit();
@@ -82,7 +82,7 @@ namespace CLUEIT2
         public void snapActiveWindowLeft()
         {
             System.Diagnostics.Process resize = new System.Diagnostics.Process();
-            resize.StartInfo.FileName = @"C:\Users\Lee\Desktop\CLUE\CLUEit_final\CLUEit\resize.exe";
+            resize.StartInfo.FileName = @"C:\Program Files\CLUEit\resize.exe";
             int coord = 0;
             int width = screensize.Width / 2;
             int height = screensize.Height;

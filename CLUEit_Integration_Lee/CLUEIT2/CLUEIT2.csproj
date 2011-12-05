@@ -36,6 +36,9 @@
   <PropertyGroup>
     <ApplicationIcon>Resources\CLUEitMan.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CLUEIT2.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="IMDb, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

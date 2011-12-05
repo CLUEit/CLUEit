@@ -18,7 +18,7 @@ namespace CLUEIT2
             {
                 //get selected text
                 System.Diagnostics.Process hotkey = new System.Diagnostics.Process();
-                hotkey.StartInfo.FileName = @"C:\Users\Lee\Desktop\preferences.xml";
+                hotkey.StartInfo.FileName = @"C:\Program Files\CLUEit\selected_text.exe";
                 hotkey.Start();
                 hotkey.WaitForExit();
                 string text = Clipboard.GetText();

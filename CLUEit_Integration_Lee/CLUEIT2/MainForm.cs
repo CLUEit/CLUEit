@@ -639,7 +639,6 @@ namespace CLUEIT2
        // }
 
         static int numPhrases = 1;
-        System.Threading.Timer timer;
         private Object checkLock = new Object();
         Preferences preferences;
         Dictionary<int, List<webServiceTab>> webServiceTabControls;
