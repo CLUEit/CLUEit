@@ -1,36 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <UserPreferences>
-  <webservice name="dictionary.com">
+  <webservice name="Dictionary">
     <preference setting="default" />
   </webservice>
-  <webservice name="wikipedia">
+  <webservice name="Wikipedia">
     <preference setting="default" />
   </webservice>
-  <webservice name="bing">
+  <webservice name="Bing">
+    <preference setting="never" />
+  </webservice>
+  <webservice name="Yahoo">
+    <preference setting="never" />
+  </webservice>
+  <webservice name="Google">
     <preference setting="default" />
   </webservice>
-  <webservice name="yahoo">
+  <webservice name="Images">
     <preference setting="default" />
   </webservice>
-  <webservice name="google">
+  <webservice name="Maps">
     <preference setting="default" />
   </webservice>
-  <webservice name="google_images">
+  <webservice name="YouTube">
     <preference setting="default" />
   </webservice>
-  <webservice name="google_maps">
+  <webservice name="IMDB">
     <preference setting="default" />
   </webservice>
-  <webservice name="youtube">
+  <webservice name="Amazon">
     <preference setting="default" />
   </webservice>
-  <webservice name="imdb">
-    <preference setting="default" />
-  </webservice>
-  <webservice name="amazon">
-    <preference setting="default" />
-  </webservice>
-  <webservice name="ebay">
+  <webservice name="Ebay">
     <preference setting="default" />
   </webservice>
 </UserPreferences>

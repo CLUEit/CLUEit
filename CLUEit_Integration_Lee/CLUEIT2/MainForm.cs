@@ -12,16 +12,31 @@ using System.Threading;
 
 namespace CLUEIT2
 {
+    struct webServiceTab
+    {
+        public webServiceTab(string name_, WebBrowser browser_)
+        {
+            this.name = name_;
+            this.browser = browser_;
+        }
+
+        public string name;
+        public WebBrowser browser;
+    }
+
+
     public partial class mainWindow : Form
     {
         public mainWindow(string[] args)
         {
+            preferences = new Preferences();
+            webServiceTabControls = new Dictionary<int,List<webServiceTab>>();
             InitializeComponent();
           //  closing = false;
             makeNewPhraseTab(args);
             tBoxSearchTerms.Text = string.Join<string>(" ", args);
 
-            timer = new System.Threading.Timer(checkForNewPhrase, null, 20000, 20000);
+            //timer = new System.Threading.Timer(checkForNewPhrase, null, 20000, 20000);
            // tabControlPhrases.Appearance = TabAppearance.FlatButtons;
         }
         public static string ScreenScrape(string url)
@@ -67,7 +82,7 @@ namespace CLUEIT2
         {
             string searchPart = string.Join<string>(" ", args);
             searchPart = searchPart.Trim();
-            //maybe jsut call join instead of looping elsewhere
+            //maybe just call join instead of looping elsewhere
 
             tabControlPhrases.TabPages.Add(searchPart);
             TabControl searches = new TabControl();
@@ -79,7 +94,7 @@ namespace CLUEIT2
          
             Dictionary<string, bool> dictionary = new Dictionary<string, bool>();
 
-            Preferences preferences = new Preferences();
+            //Preferences preferences = new Preferences();
 
             foreach (Preference preference_ in preferences.preferenceList)
             {
@@ -93,19 +108,19 @@ namespace CLUEIT2
                 }
                 else
                 {
-                    if (preference_.ServiceName == "wikipedia")
+                    if (preference_.ServiceName == "Wikipedia")
                     {
                         dictionary.Add(preference_.ServiceName, true);
                     }
-                    else if (preference_.ServiceName == "google")
+                    else if (preference_.ServiceName == "Google")
                     {
                         dictionary.Add(preference_.ServiceName, true);
                     }
-                    else if (preference_.ServiceName == "google_images")
+                    else if (preference_.ServiceName == "Images")
                     {
                         dictionary.Add(preference_.ServiceName, true);
                     }
-                    else if (preference_.ServiceName == "google_maps")
+                    else if (preference_.ServiceName == "Maps")
                     {
                         string addressPattern = @"(?<address1>((\d{1,5}(\ [a-z]+[.])?)(\ [a-z0-9]+)+)|(p\.o\.\ box\ \d{1,5}))((?<city>\ [A-Za-z]+,\ )(?<state>(A[LKSZRAP]|C[AOT]|D[EC]|F[LM]|G[AU]|HI|I[ADLN]|K[SY]|LA|M[ADEHINOPST]|N[CDEHJMVY]|O[HKR]|P[ARW]|RI|S[CD]|T[NX]|UT|V[AIT]|W[AIVY])))?";
                        
@@ -118,7 +133,7 @@ namespace CLUEIT2
                             dictionary.Add(preference_.ServiceName, false);
                         }
                     }
-                    else if (preference_.ServiceName == "youtube")
+                    else if (preference_.ServiceName == "YouTube")
                     {
                         string youtubeSearch = "";
                         foreach (string arg in args)
@@ -137,15 +152,15 @@ namespace CLUEIT2
                             dictionary.Add(preference_.ServiceName, true);
                         }
                     }
-                    else if (preference_.ServiceName == "bing")
+                    else if (preference_.ServiceName == "Bing")
                     {
                         dictionary.Add(preference_.ServiceName, true);
                     }
-                    else if (preference_.ServiceName == "yahoo")
+                    else if (preference_.ServiceName == "Yahoo")
                     {
                         dictionary.Add(preference_.ServiceName, true);
                     }
-                    else if (preference_.ServiceName == "dictionary.com")
+                    else if (preference_.ServiceName == "Dictionary")
                     {
                         dictionary.Add(preference_.ServiceName, true);
 
@@ -168,7 +183,7 @@ namespace CLUEIT2
                             }
                         }
                     }
-                    else if (preference_.ServiceName == "imdb")
+                    else if (preference_.ServiceName == "IMDB")
                     {
                         string movieSearch = "";
                         foreach (string arg in args)
@@ -188,7 +203,7 @@ namespace CLUEIT2
                             dictionary.Add(preference_.ServiceName, true);
                         }
                     }
-                    else if (preference_.ServiceName == "amazon")
+                    else if (preference_.ServiceName == "Amazon")
                     {
                         string amazonSearch = "";
                         foreach (string arg in args)
@@ -207,13 +222,13 @@ namespace CLUEIT2
                             dictionary.Add(preference_.ServiceName, true);
                         }
                     }
-                    else if (preference_.ServiceName == "ebay")
+                    else if (preference_.ServiceName == "Ebay")
                     {
                         dictionary.Add(preference_.ServiceName, true);
 
                         try
                         {
-                            if (dictionary["amazon"] == false)
+                            if (dictionary["Amazon"] == false)
                             {
                                 dictionary[preference_.ServiceName] = false;
                             }
@@ -230,7 +245,10 @@ namespace CLUEIT2
                 }
             }
 
-            if (dictionary["google"])
+
+            List<webServiceTab> serviceTabs = new List<webServiceTab>();
+
+            if (dictionary["Google"])
             {
                 searches.TabPages.Add("Google");
                 WebBrowser googleBrowser = new WebBrowser();
@@ -238,10 +256,11 @@ namespace CLUEIT2
                 googleBrowser.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right
                     | AnchorStyles.Top | AnchorStyles.Left);
                 loadGoogleTab(args, googleBrowser);
-                googleBrowser.Size = googleBrowser.Parent.Size;
+               googleBrowser.Size = googleBrowser.Parent.Size;
+                serviceTabs.Add(new webServiceTab("Google", googleBrowser));
             }
 
-            if (dictionary["google_images"])
+            if (dictionary["Images"])
             {
                 searches.TabPages.Add("Images");
                 WebBrowser imagesBrowser = new WebBrowser();
@@ -250,9 +269,10 @@ namespace CLUEIT2
                     | AnchorStyles.Top | AnchorStyles.Left);
                 loadImagesTab(args, imagesBrowser);
                 imagesBrowser.Size = imagesBrowser.Parent.Size;
+                serviceTabs.Add(new webServiceTab("Images", imagesBrowser));
             }
 
-            if(dictionary["google_maps"])
+            if(dictionary["Maps"])
             {
             searches.TabPages.Add("Maps");
             WebBrowser mapsBrowser = new WebBrowser();
@@ -261,9 +281,10 @@ namespace CLUEIT2
                 | AnchorStyles.Top | AnchorStyles.Left);
             loadMapsTab(args, mapsBrowser);
             mapsBrowser.Size = mapsBrowser.Parent.Size;
+            serviceTabs.Add(new webServiceTab("Maps", mapsBrowser));
             }
             
-            if(dictionary["youtube"])
+            if(dictionary["YouTube"])
             {
             searches.TabPages.Add("YouTube");
             WebBrowser youTubeBrowser = new WebBrowser();
@@ -272,9 +293,10 @@ namespace CLUEIT2
                 | AnchorStyles.Top | AnchorStyles.Left);
             loadYouTubeTab(args, youTubeBrowser);
             youTubeBrowser.Size = youTubeBrowser.Parent.Size;
+            serviceTabs.Add(new webServiceTab("YouTube", youTubeBrowser));
             }
 
-            if (dictionary["wikipedia"])
+            if (dictionary["Wikipedia"])
             {
                 searches.TabPages.Add("Wikipedia");
                 WebBrowser wikipediaBrowser = new WebBrowser();
@@ -283,9 +305,10 @@ namespace CLUEIT2
                     | AnchorStyles.Top | AnchorStyles.Left);
                 loadWikipediaTab(args, wikipediaBrowser);
                 wikipediaBrowser.Size = wikipediaBrowser.Parent.Size;
+                serviceTabs.Add(new webServiceTab("Wikipedia", wikipediaBrowser));
             }
 
-            if(dictionary["bing"])
+            if(dictionary["Bing"])
             {
             searches.TabPages.Add("Bing");
             WebBrowser bingBrowser = new WebBrowser();
@@ -294,9 +317,10 @@ namespace CLUEIT2
                 | AnchorStyles.Top | AnchorStyles.Left);
             loadBingTab(args, bingBrowser);
             bingBrowser.Size = bingBrowser.Parent.Size;
+            serviceTabs.Add(new webServiceTab("Bing", bingBrowser));
             }
 
-            if(dictionary["yahoo"])
+            if(dictionary["Yahoo"])
             {
             searches.TabPages.Add("Yahoo");
             WebBrowser yahooBrowser = new WebBrowser();
@@ -305,9 +329,10 @@ namespace CLUEIT2
                 | AnchorStyles.Top | AnchorStyles.Left);
             loadYahooTab(args, yahooBrowser);
             yahooBrowser.Size = yahooBrowser.Parent.Size;
+            serviceTabs.Add(new webServiceTab("Yahoo", yahooBrowser));
             }
 
-            if(dictionary["dictionary.com"])
+            if(dictionary["Dictionary"])
             {
             searches.TabPages.Add("Dictionary");
             WebBrowser dictionaryBrowser = new WebBrowser();
@@ -316,9 +341,10 @@ namespace CLUEIT2
                 | AnchorStyles.Top | AnchorStyles.Left);
             loadDictionaryTab(args, dictionaryBrowser);
             dictionaryBrowser.Size = dictionaryBrowser.Parent.Size;
+            serviceTabs.Add(new webServiceTab("Dictionary", dictionaryBrowser));
             }
 
-            if(dictionary["imdb"])
+            if(dictionary["IMDB"])
             {
             searches.TabPages.Add("IMDB");
             WebBrowser imdbBrowser = new WebBrowser();
@@ -327,9 +353,10 @@ namespace CLUEIT2
                 | AnchorStyles.Top | AnchorStyles.Left);
             loadImdbTab(args, imdbBrowser);
             imdbBrowser.Size = imdbBrowser.Parent.Size;
+            serviceTabs.Add(new webServiceTab("IMDB", imdbBrowser));
             }
 
-            if(dictionary["ebay"])
+            if(dictionary["Ebay"])
             {
             searches.TabPages.Add("Ebay");
             WebBrowser ebayBrowser = new WebBrowser();
@@ -338,9 +365,10 @@ namespace CLUEIT2
                 | AnchorStyles.Top | AnchorStyles.Left);
             loadEbayTab(args, ebayBrowser);
             ebayBrowser.Size = ebayBrowser.Parent.Size;
+            serviceTabs.Add(new webServiceTab("Ebay", ebayBrowser));
             }
 
-            if(dictionary["amazon"])
+            if(dictionary["Amazon"])
             {
             searches.TabPages.Add("Amazon");
             WebBrowser amazonBrowser = new WebBrowser();
@@ -349,8 +377,10 @@ namespace CLUEIT2
                 | AnchorStyles.Top | AnchorStyles.Left);
             loadAmazonTab(args, amazonBrowser);
             amazonBrowser.Size = amazonBrowser.Parent.Size;
+            serviceTabs.Add(new webServiceTab("Amazon", amazonBrowser));
             }
 
+            webServiceTabControls.Add(tabControlPhrases.TabCount - 1, serviceTabs);
             tabControlPhrases.SelectedIndex = tabControlPhrases.TabCount - 1;
             tabControlPhrases.SelectedTab.BackColor = Color.White;
         }
@@ -373,6 +403,60 @@ namespace CLUEIT2
             return words;
 
         }
+
+
+        void updatePhraseTab(string[] args)
+        {
+            string searchPart = string.Join<string>(" ", args);
+            searchPart = searchPart.Trim();
+            tabControlPhrases.SelectedTab.Name = searchPart;
+
+            List<webServiceTab> serviceTabs = webServiceTabControls[tabControlPhrases.SelectedIndex];
+
+            foreach (webServiceTab tab in serviceTabs)
+            {
+                switch(tab.name)
+                {
+                    case "Google":
+                        loadGoogleTab(args, tab.browser);
+                        break;
+                    case "Wikipedia":
+                        loadWikipediaTab(args, tab.browser);
+                        break;
+                    case "Dictionary":
+                        loadDictionaryTab(args, tab.browser);
+                        break;
+                    case "Bing":
+                        loadBingTab(args, tab.browser);
+                        break;
+                    case "Yahoo":
+                        loadYahooTab(args, tab.browser);
+                        break;
+                    case "Images":
+                        loadImagesTab(args, tab.browser);
+                        break;
+                    case "Maps":
+                        loadMapsTab(args, tab.browser);
+                        break;
+                    case "YouTube":
+                        loadYouTubeTab(args, tab.browser);
+                        break;
+                    case "IMDB":
+                        loadImdbTab(args, tab.browser);
+                        break;
+                    case "Amazon":
+                        loadAmazonTab(args, tab.browser);
+                        break;
+                    case "Ebay":
+                        loadEbayTab(args, tab.browser);
+                        break;
+            }
+            }
+            //dictionary of indices to tab control that have web services
+           // tabControlPhrases.SelectedTab.
+        }
+
+
 
         private void loadDictionaryTab(string[] args, WebBrowser browser)
         {
@@ -497,7 +581,7 @@ namespace CLUEIT2
 
         private void loadSettingsForm()
         {
-            SettingsForm settings = new SettingsForm();
+            SettingsForm settings = new SettingsForm(preferences);
             settings.ShowDialog();
         }
 
@@ -509,7 +593,7 @@ namespace CLUEIT2
                 return;
             }
 
-            makeNewPhraseTab(tBoxSearchTerms.Text.Split(' '));
+            updatePhraseTab(tBoxSearchTerms.Text.Split(' '));
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
@@ -540,10 +624,24 @@ namespace CLUEIT2
         static int numPhrases = 1;
         System.Threading.Timer timer;
         private Object checkLock = new Object();
+        Preferences preferences;
+        Dictionary<int, List<webServiceTab>> webServiceTabControls;
 
         private void mainWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
-            timer.Dispose();
+           // timer.Dispose();
+            //this.Close();
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            if (tBoxSearchTerms.Text.Trim() == "")
+            {
+                MessageBox.Show("No search terms were entered");
+                return;
+            }
+
+            makeNewPhraseTab(tBoxSearchTerms.Text.Split(' '));
         }
 
     }

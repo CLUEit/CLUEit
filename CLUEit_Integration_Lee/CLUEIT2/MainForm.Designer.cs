@@ -36,7 +36,8 @@
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.tabControlPhrases = new System.Windows.Forms.TabControl();
-            this.toolTipSettings = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipButtons = new System.Windows.Forms.ToolTip(this.components);
+            this.btnNew = new System.Windows.Forms.Button();
             this.tlpMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,22 +46,23 @@
             this.tlpMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.tlpMain.ColumnCount = 4;
+            this.tlpMain.ColumnCount = 5;
             this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
             this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 69F));
+            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tlpMain.Controls.Add(this.tBoxSearchTerms, 1, 0);
             this.tlpMain.Controls.Add(this.labelCLUEit, 0, 0);
-            this.tlpMain.Controls.Add(this.btnSettings, 3, 0);
             this.tlpMain.Controls.Add(this.btnUpdate, 2, 0);
             this.tlpMain.Controls.Add(this.tabControlPhrases, 0, 1);
+            this.tlpMain.Controls.Add(this.btnSettings, 4, 0);
+            this.tlpMain.Controls.Add(this.btnNew, 3, 0);
             this.tlpMain.Location = new System.Drawing.Point(1, 6);
             this.tlpMain.Name = "tlpMain";
             this.tlpMain.RowCount = 2;
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpMain.Size = new System.Drawing.Size(497, 305);
             this.tlpMain.TabIndex = 0;
             // 
@@ -70,7 +72,7 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.tBoxSearchTerms.Location = new System.Drawing.Point(98, 12);
             this.tBoxSearchTerms.Name = "tBoxSearchTerms";
-            this.tBoxSearchTerms.Size = new System.Drawing.Size(291, 20);
+            this.tBoxSearchTerms.Size = new System.Drawing.Size(241, 20);
             this.tBoxSearchTerms.TabIndex = 2;
             // 
             // labelCLUEit
@@ -96,7 +98,7 @@
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(30, 29);
             this.btnSettings.TabIndex = 6;
-            this.toolTipSettings.SetToolTip(this.btnSettings, "Settings");
+            this.toolTipButtons.SetToolTip(this.btnSettings, "Settings");
             this.btnSettings.UseVisualStyleBackColor = true;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
@@ -104,11 +106,12 @@
             // 
             this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdate.Location = new System.Drawing.Point(395, 10);
+            this.btnUpdate.Location = new System.Drawing.Point(345, 10);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(63, 22);
             this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "Update";
+            this.toolTipButtons.SetToolTip(this.btnUpdate, "updates the search for the currently selected tab");
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -117,7 +120,7 @@
             this.tabControlPhrases.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.tlpMain.SetColumnSpan(this.tabControlPhrases, 4);
+            this.tlpMain.SetColumnSpan(this.tabControlPhrases, 5);
             this.tabControlPhrases.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlPhrases.Location = new System.Drawing.Point(3, 38);
             this.tabControlPhrases.Multiline = true;
@@ -125,6 +128,19 @@
             this.tabControlPhrases.SelectedIndex = 0;
             this.tabControlPhrases.Size = new System.Drawing.Size(491, 264);
             this.tabControlPhrases.TabIndex = 5;
+            // 
+            // btnNew
+            // 
+            this.btnNew.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNew.Location = new System.Drawing.Point(414, 9);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(44, 23);
+            this.btnNew.TabIndex = 7;
+            this.btnNew.Text = "New";
+            this.toolTipButtons.SetToolTip(this.btnNew, "performs a search for the entered text in a new tab");
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // mainWindow
             // 
@@ -136,6 +152,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(516, 349);
             this.Name = "mainWindow";
+            this.RightToLeftLayout = true;
             this.Text = "CLUEit";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mainWindow_FormClosing);
             this.tlpMain.ResumeLayout(false);
@@ -150,9 +167,10 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.TextBox tBoxSearchTerms;
         private System.Windows.Forms.Label labelCLUEit;
-        private System.Windows.Forms.TabControl tabControlPhrases;
         private System.Windows.Forms.Button btnSettings;
-        private System.Windows.Forms.ToolTip toolTipSettings;
+        private System.Windows.Forms.ToolTip toolTipButtons;
+        private System.Windows.Forms.TabControl tabControlPhrases;
+        private System.Windows.Forms.Button btnNew;
     }
 }
 

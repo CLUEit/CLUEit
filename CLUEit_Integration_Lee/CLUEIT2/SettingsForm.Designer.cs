@@ -75,7 +75,8 @@
             this.labelDefaultNote.Size = new System.Drawing.Size(368, 48);
             this.labelDefaultNote.TabIndex = 0;
             this.labelDefaultNote.Text = "Note: Selecting \"Default\" means that the corresponding web service tab will only " +
-                "display if CLUEit\'s algorithms determine it is relevant for the text selected.";
+                "display if CLUEit\'s algorithms determine it is relevant for the text being searc" +
+                "hed.";
             // 
             // dgvChooseSettings
             // 
@@ -145,6 +146,7 @@
             this.btnOK.TabIndex = 2;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnCancel
             // 
@@ -172,7 +174,7 @@
             this.MinimumSize = new System.Drawing.Size(390, 322);
             this.Name = "SettingsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee";
+            this.Text = "Settings";
             this.tlpSettings.ResumeLayout(false);
             this.tlpSettings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChooseSettings)).EndInit();
