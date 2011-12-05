@@ -13,7 +13,7 @@ namespace CLUEIT2
     {
         public SettingsForm(Preferences preferences_)
         {
-            changedSettings = new Dictionary<string,settings>();
+           // changedSettings = new Dictionary<string,settings>();
             preferences = preferences_;
             InitializeComponent();
             int index;
@@ -21,25 +21,39 @@ namespace CLUEIT2
             foreach (Preference preference in preferences.preferenceList)
             {
                 index = dgvChooseSettings.Rows.Add(preference.ServiceName);
+              //  dgvChooseSettings.Rows[index].Height = 30;
+                dgvChooseSettings.Columns[0].DefaultCellStyle.Font = new Font(dgvChooseSettings.DefaultCellStyle.Font, FontStyle.Bold);
                 dgvChooseSettings.Rows[index].Cells["webService"].Value = preference.ServiceName;
+
+                DataGridViewComboBoxCell cell = dgvChooseSettings.Rows[index].Cells["options"] as DataGridViewComboBoxCell;
+                cell.Items.Add("Default");
+                cell.Items.Add("Always Display");
+                cell.Items.Add("Never Display");
 
                 if(preference.Setting == settings.alwaysDisplay)
                 {
-                    dgvChooseSettings.Rows[index].Cells["alwaysDisplayS"].Value = true;
-                    dgvChooseSettings.Rows[index].Cells["alwaysDisplayS"].ReadOnly = true;
+                    cell.Value = cell.Items[1];
+                   // dgvChooseSettings.Rows[index].Cells["alwaysDisplayS"].Value = true;
+                    //dgvChooseSettings.Rows[index].Cells["alwaysDisplayS"].ReadOnly = true;
                 }
 
-                 else if(preference.Setting == settings.neverDisplay)
+                else if(preference.Setting == settings.neverDisplay)
                 {
-                    dgvChooseSettings.Rows[index].Cells["neverDisplayS"].Value = true;
-                    dgvChooseSettings.Rows[index].Cells["neverDisplayS"].ReadOnly = true;
+                    cell.Value = cell.Items[2];
+                    //dgvChooseSettings.Rows[index].Cells["neverDisplayS"].Value = true;
+                    //dgvChooseSettings.Rows[index].Cells["neverDisplayS"].ReadOnly = true;
                 }
 
                 else
                 {
-                    dgvChooseSettings.Rows[index].Cells["defaultS"].Value = true;
-                    dgvChooseSettings.Rows[index].Cells["defaultS"].ReadOnly = true;
+                    cell.Value = cell.Items[0];
+                    //dgvChooseSettings.Rows[index].Cells["defaultS"].Value = true;
+                    //dgvChooseSettings.Rows[index].Cells["defaultS"].ReadOnly = true;
                 }
+
+                index = dgvChooseSettings.Rows.Add();
+                dgvChooseSettings.Rows[index].Cells[1] = new DataGridViewTextBoxCell();
+                dgvChooseSettings.Rows[index].Height = 6;
             }
         }
 
@@ -150,7 +164,7 @@ namespace CLUEIT2
 
         private void dgvChooseSettings_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvChooseSettings.CurrentCell != null && dgvChooseSettings.CurrentCell.ColumnIndex != 0 
+            /*if (dgvChooseSettings.CurrentCell != null && dgvChooseSettings.CurrentCell.ColumnIndex != 0 
                     && dgvChooseSettings.CurrentCell.Value != null && (bool)dgvChooseSettings.CurrentCell.Value == true
                     && e.RowIndex == dgvChooseSettings.CurrentCell.RowIndex && e.ColumnIndex == dgvChooseSettings.CurrentCell.ColumnIndex)
             {
@@ -208,20 +222,44 @@ namespace CLUEIT2
                     dgvChooseSettings.CurrentRow.Cells["alwaysDisplayS"].Value = false;
                     dgvChooseSettings.CurrentRow.Cells["alwaysDisplayS"].ReadOnly = false;
                 }
-            }
+            }*/
         }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            foreach (var s in changedSettings)
+           /* foreach (var s in changedSettings)
             {
                 preferences.UpdatePreference(s.Key, s.Value);
             }
 
-            this.Close();
+            this.Close();*/
+
+            foreach(DataGridViewRow row in dgvChooseSettings.Rows)
+            {
+                //dgv doesn't need anymore headings, right?
+                //make sure if a cell was in it's dirty state it's value has actually changed when OK is pressed
+                //(might have to call commit everytime the dirty state is changed)
+                if (row.Cells[1].Value.ToString() == "Default")
+                {
+                    preferences.UpdatePreference(row.Cells[0].Value.ToString(), settings.defaultDisplay);
+                }
+
+                else if (row.Cells[1].Value.ToString() == "Always Display")
+                {
+                    preferences.UpdatePreference(row.Cells[0].Value.ToString(), settings.alwaysDisplay);
+                }
+
+                else if (row.Cells[1].Value.ToString() == "Never Display")
+                {
+                    preferences.UpdatePreference(row.Cells[0].Value.ToString(), settings.neverDisplay);
+                }
+
+                this.Close();
+
+            }
         }
 
         Preferences preferences;
-        Dictionary<string, settings> changedSettings;
+        //Dictionary<string, settings> changedSettings;
     }
 }

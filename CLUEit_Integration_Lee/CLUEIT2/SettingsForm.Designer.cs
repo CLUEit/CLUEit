@@ -32,12 +32,11 @@
             this.tlpSettings = new System.Windows.Forms.TableLayoutPanel();
             this.labelDefaultNote = new System.Windows.Forms.Label();
             this.dgvChooseSettings = new System.Windows.Forms.DataGridView();
-            this.webService = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.defaultS = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.alwaysDisplayS = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.neverDisplayS = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.webService = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.options = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.ColumnSpace = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlpSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChooseSettings)).BeginInit();
             this.SuspendLayout();
@@ -60,7 +59,7 @@
             this.tlpSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
             this.tlpSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tlpSettings.Size = new System.Drawing.Size(374, 286);
+            this.tlpSettings.Size = new System.Drawing.Size(224, 294);
             this.tlpSettings.TabIndex = 0;
             // 
             // labelDefaultNote
@@ -70,9 +69,9 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDefaultNote.AutoSize = true;
             this.tlpSettings.SetColumnSpan(this.labelDefaultNote, 2);
-            this.labelDefaultNote.Location = new System.Drawing.Point(3, 213);
+            this.labelDefaultNote.Location = new System.Drawing.Point(3, 221);
             this.labelDefaultNote.Name = "labelDefaultNote";
-            this.labelDefaultNote.Size = new System.Drawing.Size(368, 48);
+            this.labelDefaultNote.Size = new System.Drawing.Size(218, 48);
             this.labelDefaultNote.TabIndex = 0;
             this.labelDefaultNote.Text = "Note: Selecting \"Default\" means that the corresponding web service tab will only " +
                 "display if CLUEit\'s algorithms determine it is relevant for the text being searc" +
@@ -89,58 +88,28 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvChooseSettings.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvChooseSettings.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvChooseSettings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvChooseSettings.ColumnHeadersVisible = false;
             this.dgvChooseSettings.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.webService,
-            this.defaultS,
-            this.alwaysDisplayS,
-            this.neverDisplayS});
+            this.options,
+            this.ColumnSpace});
             this.tlpSettings.SetColumnSpan(this.dgvChooseSettings, 2);
             this.dgvChooseSettings.Location = new System.Drawing.Point(3, 3);
             this.dgvChooseSettings.Name = "dgvChooseSettings";
             this.dgvChooseSettings.RowHeadersVisible = false;
-            this.dgvChooseSettings.Size = new System.Drawing.Size(368, 207);
+            this.dgvChooseSettings.Size = new System.Drawing.Size(218, 215);
             this.dgvChooseSettings.TabIndex = 1;
             this.dgvChooseSettings.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChooseSettings_CellValueChanged);
             this.dgvChooseSettings.CurrentCellChanged += new System.EventHandler(this.dgvChooseSettings_CurrentCellChanged);
             this.dgvChooseSettings.CurrentCellDirtyStateChanged += new System.EventHandler(this.dgvChooseSettings_CurrentCellDirtyStateChanged);
             // 
-            // webService
-            // 
-            this.webService.FillWeight = 110F;
-            this.webService.HeaderText = "Web Service";
-            this.webService.Name = "webService";
-            this.webService.ReadOnly = true;
-            // 
-            // defaultS
-            // 
-            this.defaultS.FillWeight = 65F;
-            this.defaultS.HeaderText = "Default";
-            this.defaultS.Name = "defaultS";
-            this.defaultS.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.defaultS.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // alwaysDisplayS
-            // 
-            this.alwaysDisplayS.FillWeight = 112F;
-            this.alwaysDisplayS.HeaderText = "Always Display";
-            this.alwaysDisplayS.Name = "alwaysDisplayS";
-            this.alwaysDisplayS.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.alwaysDisplayS.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // neverDisplayS
-            // 
-            this.neverDisplayS.FillWeight = 110F;
-            this.neverDisplayS.HeaderText = "Never Display";
-            this.neverDisplayS.Name = "neverDisplayS";
-            this.neverDisplayS.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.neverDisplayS.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // btnOK
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOK.Location = new System.Drawing.Point(200, 264);
+            this.btnOK.Location = new System.Drawing.Point(50, 272);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 19);
             this.btnOK.TabIndex = 2;
@@ -153,12 +122,34 @@
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(296, 264);
+            this.btnCancel.Location = new System.Drawing.Point(146, 272);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 19);
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            // 
+            // webService
+            // 
+            this.webService.FillWeight = 112F;
+            this.webService.HeaderText = "Web Service";
+            this.webService.Name = "webService";
+            this.webService.ReadOnly = true;
+            this.webService.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // options
+            // 
+            this.options.FillWeight = 120F;
+            this.options.HeaderText = "Options";
+            this.options.Name = "options";
+            this.options.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.options.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // ColumnSpace
+            // 
+            this.ColumnSpace.FillWeight = 10F;
+            this.ColumnSpace.HeaderText = "Column Space";
+            this.ColumnSpace.Name = "ColumnSpace";
             // 
             // SettingsForm
             // 
@@ -166,12 +157,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(384, 294);
+            this.ClientSize = new System.Drawing.Size(234, 302);
             this.Controls.Add(this.tlpSettings);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(390, 322);
-            this.MinimumSize = new System.Drawing.Size(390, 322);
+            this.MaximumSize = new System.Drawing.Size(240, 330);
+            this.MinimumSize = new System.Drawing.Size(240, 330);
             this.Name = "SettingsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Settings";
@@ -190,9 +181,8 @@
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.DataGridViewTextBoxColumn webService;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn defaultS;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn alwaysDisplayS;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn neverDisplayS;
+        private System.Windows.Forms.DataGridViewComboBoxColumn options;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSpace;
 
     }
 }
