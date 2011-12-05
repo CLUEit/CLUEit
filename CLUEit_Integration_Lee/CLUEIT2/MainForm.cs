@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Windows.Forms;
 using System.Threading;
@@ -47,6 +48,7 @@ namespace CLUEIT2
                 return client.DownloadString(url);
             }
         }
+
 
      //   static public void waitForNewPhrase()
       //  {
@@ -110,7 +112,22 @@ namespace CLUEIT2
                 {
                     if (preference_.ServiceName == "Wikipedia")
                     {
+                        MatchCollection collection = System.Text.RegularExpressions.Regex.Matches(searchPart, @"[\S]+");
+                        int numberWords = collection.Count;
+
                         dictionary.Add(preference_.ServiceName, true);
+
+                        try
+                        {
+                            if (dictionary["Maps"] == true || numberWords > 4)
+                            {
+                                dictionary[preference_.ServiceName] = false;
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine("{0}: Wikipedia must be last in preference list.", e);
+                        }
                     }
                     else if (preference_.ServiceName == "Google")
                     {
@@ -192,15 +209,15 @@ namespace CLUEIT2
                         }
 
                         string imdbPage = ScreenScrape("http://www.imdb.com/find?s=all&q=" + movieSearch);
-                        string imdbPattern = @"(No\ Matches.)";
+                        string imdbPattern = @"((Popular\ Titles)|(Exact\ Matches))";
 
                         if (System.Text.RegularExpressions.Regex.IsMatch(imdbPage, imdbPattern, System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace | System.Text.RegularExpressions.RegexOptions.IgnoreCase))
                         {
-                            dictionary.Add(preference_.ServiceName, false);
+                            dictionary.Add(preference_.ServiceName, true);
                         }
                         else
                         {
-                            dictionary.Add(preference_.ServiceName, true);
+                            dictionary.Add(preference_.ServiceName, false);
                         }
                     }
                     else if (preference_.ServiceName == "Amazon")
@@ -211,7 +228,7 @@ namespace CLUEIT2
                             amazonSearch += arg + "+";
                         }
                         string amazonPage = ScreenScrape("http://www.amazon.com/s/ref=nb_sb_ss_i_7_5?url=search-alias%3Daps&field-keywords=" + amazonSearch);
-                        string amazonPattern = @"(No\ Results\ Match\ Your\ Search)";
+                        string amazonPattern = @"((No\ Results\ Match\ Your\ Search)| (did\ not\ match\ any))";
 
                         if (System.Text.RegularExpressions.Regex.IsMatch(amazonPage, amazonPattern, System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace | System.Text.RegularExpressions.RegexOptions.IgnoreCase))
                         {

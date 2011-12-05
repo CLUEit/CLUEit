@@ -12,7 +12,7 @@ namespace CLUEIT2
         //container of Preference objects
         public List<Preference> preferenceList;
         //name of the file containing the xml preferences
-        private const string xmlFilename = @"C:\Users\Lou\CLUEit\preferences.xml";
+        private const string xmlFilename = @"C:\Users\Lee\Desktop\CLUE\CLUEit_final\CLUEit\preferences.xml";
         //xmldocument type containing xml data
         private XmlDocument preferenceDoc;
 
