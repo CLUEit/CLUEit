@@ -25,7 +25,7 @@ namespace CLUEIT2
                 Clipboard.Clear();
                 string[] args = text.Split();
                 //setup active window resizing
-                Globals.preferences = new Preferences();
+                //Globals.preferences = new Preferences();
                 Globals.windowResizer = new Resize();
                 Globals.windowResizer.saveActiveWindowSize();
                 Globals.windowResizer.snapActiveWindowLeft();
