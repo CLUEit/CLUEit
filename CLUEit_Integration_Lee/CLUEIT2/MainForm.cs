@@ -629,8 +629,7 @@ namespace CLUEIT2
 
         private void mainWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
-           // timer.Dispose();
-            //this.Close();
+            Globals.windowResizer.restoreActiveWindowSize();
         }
 
         private void btnNew_Click(object sender, EventArgs e)

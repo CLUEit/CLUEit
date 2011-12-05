@@ -33,11 +33,11 @@
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.tBoxSearchTerms = new System.Windows.Forms.TextBox();
             this.labelCLUEit = new System.Windows.Forms.Label();
-            this.btnSettings = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.tabControlPhrases = new System.Windows.Forms.TabControl();
-            this.toolTipButtons = new System.Windows.Forms.ToolTip(this.components);
+            this.btnSettings = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
+            this.toolTipButtons = new System.Windows.Forms.ToolTip(this.components);
             this.tlpMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,21 +87,6 @@
             this.labelCLUEit.TabIndex = 1;
             this.labelCLUEit.Text = "CLUEit";
             // 
-            // btnSettings
-            // 
-            this.btnSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSettings.BackgroundImage = global::CLUEIT2.Properties.Resources.settingsIcon;
-            this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSettings.Location = new System.Drawing.Point(464, 3);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(30, 29);
-            this.btnSettings.TabIndex = 6;
-            this.toolTipButtons.SetToolTip(this.btnSettings, "Settings");
-            this.btnSettings.UseVisualStyleBackColor = true;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
-            // 
             // btnUpdate
             // 
             this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
@@ -129,6 +114,21 @@
             this.tabControlPhrases.Size = new System.Drawing.Size(491, 264);
             this.tabControlPhrases.TabIndex = 5;
             // 
+            // btnSettings
+            // 
+            this.btnSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSettings.BackgroundImage = global::CLUEIT2.Properties.Resources.settingsIcon;
+            this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSettings.Location = new System.Drawing.Point(464, 3);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(30, 29);
+            this.btnSettings.TabIndex = 6;
+            this.toolTipButtons.SetToolTip(this.btnSettings, "Settings");
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
             // btnNew
             // 
             this.btnNew.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
@@ -153,6 +153,7 @@
             this.MinimumSize = new System.Drawing.Size(516, 349);
             this.Name = "mainWindow";
             this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "CLUEit";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mainWindow_FormClosing);
             this.tlpMain.ResumeLayout(false);
