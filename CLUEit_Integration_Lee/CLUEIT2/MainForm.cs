@@ -427,6 +427,7 @@ namespace CLUEIT2
             string searchPart = string.Join<string>(" ", args);
             searchPart = searchPart.Trim();
             tabControlPhrases.SelectedTab.Name = searchPart;
+            tabControlPhrases.SelectedTab.Text = searchPart;
 
             List<webServiceTab> serviceTabs = webServiceTabControls[tabControlPhrases.SelectedIndex];
 
