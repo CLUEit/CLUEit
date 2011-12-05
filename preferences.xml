@@ -1,17 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <UserPreferences>
-  <webservice name="Dictionary">
-    <preference setting="default" />
-  </webservice>
-  <webservice name="Wikipedia">
-    <preference setting="default" />
-  </webservice>
-  <webservice name="Bing">
-    <preference setting="never" />
-  </webservice>
-  <webservice name="Yahoo">
-    <preference setting="never" />
-  </webservice>
   <webservice name="Google">
     <preference setting="default" />
   </webservice>
@@ -24,6 +12,15 @@
   <webservice name="YouTube">
     <preference setting="default" />
   </webservice>
+  <webservice name="Bing">
+    <preference setting="never" />
+  </webservice>
+  <webservice name="Yahoo">
+    <preference setting="never" />
+  </webservice>
+  <webservice name="Dictionary">
+    <preference setting="default" />
+  </webservice>
   <webservice name="IMDB">
     <preference setting="default" />
   </webservice>
@@ -31,6 +28,9 @@
     <preference setting="default" />
   </webservice>
   <webservice name="Ebay">
+    <preference setting="default" />
+  </webservice>
+  <webservice name="Wikipedia">
     <preference setting="default" />
   </webservice>
 </UserPreferences>
